@@ -1,60 +1,55 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137500124-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    gtag('config', 'UA-137500124-1');
-  </script>
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
 
-  <meta charset="utf-8">
-  <meta name="robots" content="max-snippet:28">
 
-  <title>Marcus Nystrand</title>
-  <meta name="description" content="Marcus Nystrand">
-  <meta name="author" content="SitePoint">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mediaquerys.css">
-  <link rel="stylesheet" href="css/underlines.css">
-</head>
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
 
-<body>
-  <div class="allwrap">
-    <div class="navwrap">
-      <div class="title">Marcus Nystrand</div>
-      <div class="navlinks"><a href="index.html"><u>projects</u></div></a>
-      <div class="navlinks"><a href="about.html">about</div></a>
-    </div>
-
-    <div class="mainwrap">
-
-        <iframe src="http://www.youtube.com/embed/videoseries?list=UUmtyQOKKmrMVaKuRXz02jbQ" width="480" height="400"></iframe>
-
-        <object width="425" height="344">
-<param name="movie" value="http://www.youtube.com/v/u1zgFlCw8Aw?fs=1"</param>
-<param name="allowFullScreen" value="true"></param>
-<param name="allowScriptAccess" value="always"></param>
-<embed src="http://www.youtube.com/v/u1zgFlCw8Aw?fs=1"
-  type="application/x-shockwave-flash"
-  allowfullscreen="true"
-  allowscriptaccess="always"
-  width="425" height="344">
-</embed>
-</object>
-
-    </div>
-    <br><br>
-  </div>
-</body>
-
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+  </body>
 </html>
