@@ -1,0 +1,57 @@
+    @font-face {
+    font-family: 'YouTube Sans';
+    src: url('YouTubeSansRegular.otf') format('opentype');
+}
+
+        body {
+             font-family: 'YouTube Sans', Roboto, sans-serif;
+            font-size: 1.2rem;
+            background-color: #0F0F0F;
+        }
+
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .video-card {
+            width: calc(25% - 20px);  /* 25% minus gap to ensure 4 per row */
+            overflow: hidden;
+            color: #ffffff;
+            border-radius: 0.2rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.6rem;
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 428px;
+            border: none;
+        }
+
+        .video-title {
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        /* Media queries for responsive layout */
+        @media (max-width: 1200px) {
+            .video-card {
+                width: calc(33.33% - 20px); /* 33.33% minus gap for 3 per row */
+            }
+        }
+
+        @media (max-width: 800px) {
+            .video-card {
+                width: calc(50% - 20px); /* 50% minus gap for 2 per row */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .video-card {
+                width: 100%; /* 1 per row for smaller screens */
+            }
+        }
