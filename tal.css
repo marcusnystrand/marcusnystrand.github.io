@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background-color: #232323;
+    font-size: 16px;
+    line-height: 135%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  color: white;
+}
+
+button {
+  margin: 5px auto 15px auto; 
+  display: block;           
+  padding: 14px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+}
+
+.content {
+  padding: 1rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}

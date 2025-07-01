@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tal</title>
+    <link rel="stylesheet" href="tal.css">
+  </head>
+  <body>
+    <div class="content">
+      <p>Kära brudpar, kära gäster,</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Att sitta här i dag, med dessert på tallriken och kärlek i luften, känns nästan overkligt – särskilt om man vet hur krokig vägen hit har varit.</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Från det där frieriet som nästan blev av på semestern – men som fick skjutas upp för att ringen låg kvar hemma…</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Till planeringen som gick från "vi kör något enkelt" till ett excelark med fem flikar och tre planeringskriser.</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Det har varit inställda datum, ombokade lokaler, klänningskriser, bordsplaceringsdrama och den där släktingen som absolut inte kunde sitta bredvid den andra.</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Men ni klarade det.</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Ni tog er igenom allt – med humor, envishet och en hel del kärlek.</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Och nu sitter vi här, mätta, lyckliga, och framför allt: ni är gifta.</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Om det här var resan hit, så kan man bara tänka sig hur fantastiskt äventyret blir framöver.</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+
+      <p>Skål för brudparet – och för att kärleken, trots allt, alltid hittar sin väg!</p>
+      <button data-sound="whip.mp3" onclick="playSound(this)">▶ Spela upp</button>
+    </div>
+
+    <script>
+      function playSound(button) {
+        const soundFile = button.getAttribute("data-sound");
+        const audio = new Audio(`tal/${soundFile}`);
+        audio.play();
+      }
+    </script>
+  </body>
+</html>
