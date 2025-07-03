@@ -19,14 +19,11 @@
       <p>Det hela började med att Gustav och Sabina njöt av solnedgången på en strand i Cypern. Gustav hade planerat detta ögonblick i månader och var nu redo. Han tog fram en ring och när Sabina fick syn på den tänkte hon</p>
       <button data-sound="myprecious.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
-      <p>Han frågade Sabina: “Vill du gifta dig med mig?”</p>
-      <button data-sound="weddingmarch.mp3" onclick="playSound(this)">▶ Spela upp</button>
-
-      <p>Sabina tittade honom djupt i ögonen</p>
+      <p>Han frågade Sabina: “Vill du gifta dig med mig?”. Sabina tittade honom djupt i ögonen</p>
       <button data-sound="millionairethinking.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
       <p>Gustav var rädd att hon skulle säga</p>
-      <button data-sound="noidontthinkso.mp3" onclick="playSound(this)">▶ Spela upp</button>
+      <button data-sound="kungen.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
       <p>Men Sabina svarade: Ja!</p>
       <button data-sound="millionairewin.mp3" onclick="playSound(this)">▶ Spela upp</button>
@@ -60,19 +57,18 @@
       <p>Så var det maten som vi alla precis har avnjutit. Italiensk buffé känns som det klockrena valet när vi sitter här idag, även om man kunde önska att menyn hade lite mer</p>
       <button data-sound="pescatorevesuvio.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
-      <p>Sen får vi inte glömma tårtan. De ville ha en tårta som skulle flygas in med</p>
+      <p>Sen får vi inte glömma tårtan. De ville först ha en tårta som skulle flygas in med</p>
       <button data-sound="helicopter.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
       <p>samt vara</p>
-      <button data-sound="mustigt.mp3" onclick="playSound(this)">▶ Spela upp</button>
+      <button data-sound="krispigt.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
       <p>Tyvärr fanns inga helikoptrar lediga idag så det fick bli en mer modest tårta.</p>
 
       <p>Som ni hör har det varit en</p>
-      <button data-sound="mustigt.mp3" onclick="playSound(this)">▶ Spela upp</button>
+      <button data-sound="ojojoj.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
       <p>planeringsprocess och vi vill passa på att tacka er enormt för att ni samlat oss alla här idag för att fira med er!</p>
-      <button data-sound="clapping.mp3" onclick="playSound(this)">▶ Spela upp</button>
 
       <p>Och med detta vill vi utbringa en skål för brudparet!</p>
       <button data-sound="bottlepop.mp3" onclick="playSound(this)">▶ Spela upp</button>
@@ -101,6 +97,13 @@
         audio.currentTime = 0;
         audio.play();
       }
+
+      // Ändra alla knappars text till ▶ filnamn (utan .mp3)
+      document.querySelectorAll('button[data-sound]').forEach(button => {
+        const soundFile = button.getAttribute('data-sound');
+        const fileName = soundFile.replace(/\.[^/.]+$/, ''); // Tar bort filändelsen
+        button.textContent = `▶ ${fileName}`;
+      });
     </script>
   </body>
 </html>
