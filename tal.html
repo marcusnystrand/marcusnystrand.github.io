@@ -83,9 +83,22 @@
     </div>
 
     <script>
+      // Skapa ett objekt för att lagra ljudinstanser
+      const audioCache = {};
+
       function playSound(button) {
         const soundFile = button.getAttribute("data-sound");
-        const audio = new Audio(`tal/${soundFile}`);
+
+        // Om ljudet redan finns i cachen, återanvänd det
+        if (!audioCache[soundFile]) {
+          audioCache[soundFile] = new Audio(`tal/${soundFile}`);
+        }
+
+        const audio = audioCache[soundFile];
+
+        // Stoppa och spela om från början
+        audio.pause();
+        audio.currentTime = 0;
         audio.play();
       }
     </script>
