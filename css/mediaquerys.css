@@ -53,6 +53,10 @@
   .rowspace {
     margin-bottom: 0.8em;
   }
+
+  .endOfSectionSpacing {
+    margin-bottom: 2.6rem;
+  }
 }
 
 @media screen and (max-width: 950px) {
