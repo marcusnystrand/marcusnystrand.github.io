@@ -60,7 +60,7 @@ iframe {
   display: grid;
   grid-template-columns: 15fr 1fr 1fr;
   margin: 0 auto;
-  margin-bottom: 5.5vh;
+  margin-bottom: 1.88em;
   margin-top: 4vh;
   grid-gap: 0.7em;
   width: 100%;

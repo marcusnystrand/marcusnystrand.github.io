@@ -22,6 +22,7 @@
 
   .contentwrap {
     grid-template-columns: 1fr;
+    row-gap: 2.5em;
   }
 
   .gallery {
@@ -81,6 +82,7 @@
   .contentwrap {
     margin-top: 0em;
     margin-bottom: 0.8em;
+    row-gap: 2em;
   }
 
   .title {
@@ -94,7 +96,7 @@
 
   .navwrap {
     grid-template-columns: 0fr 4fr;
-    margin-bottom: 4vh;
+    margin-bottom: 1.6em;
   }
 
   body {
