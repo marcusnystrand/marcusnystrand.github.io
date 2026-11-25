@@ -68,6 +68,7 @@ iframe {
 
 .info {
   width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .mainwrap {
