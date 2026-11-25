@@ -1,5 +1,5 @@
 body {
-  background-color: #EEEEEE;
+  background-color: #E9E9E9;
   color: black;
   margin: 0 auto;
   padding: 0 auto;
@@ -79,7 +79,7 @@ iframe {
 
 .contentwrap {
   display: grid;
-  row-gap: 1.8em;
+  row-gap: 1.9em;
   grid-template-columns: 35% 55%;   
   justify-content: space-between; 
   align-items: start;
@@ -100,7 +100,6 @@ iframe {
   overflow: hidden;
   border-radius: 0.1em;
   color: black;
-  background-color: #e1e1e1;
 }
 
 .thumbnail {

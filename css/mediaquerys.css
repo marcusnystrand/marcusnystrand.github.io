@@ -7,18 +7,18 @@
 
   .contentwrap {
     row-gap: 1.5em;
-    grid-template-columns: 48% 48%;
+    grid-template-columns: 55% 40%;
     justify-content: space-between;
     align-items: start;
   }
 
-}
-
-@media screen and (max-width: 1150px) {
-
   .mainwrap {
     grid-template-columns: 1fr;
   }
+
+}
+
+@media screen and (max-width: 1050px) {
 
   .contentwrap {
     grid-template-columns: 1fr;
@@ -71,6 +71,7 @@
 
   .mainwrap {
     grid-template-columns: 1fr;
+    grid-gap: 0.8em;
   }
 
   .fullgallery {
