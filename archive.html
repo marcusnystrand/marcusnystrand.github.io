@@ -33,7 +33,7 @@
 <body>
   <div class="allwrap">
     <div class="navwrap">
-      <div class="title"><a id="portfolio-link" href="index.html">Marcus Nystrand</a></div>
+      <div class="title"><a id="home-link" href="index.html">Marcus Nystrand</a></div>
       <div class="navlinks"><a id="portfolio-link" href="index.html"><u>portfolio</u></a></div>
       <div class="navlinks"><a href="archive.html"><u>archive</u></div></a>
     </div>
@@ -114,12 +114,6 @@
   </div>
 </body>
 
-  <script>
-  const isLocal = window.location.protocol === "file:";
-
-  if (!isLocal) {
-    document.getElementById("portfolio-link").href = "/";
-  }
-</script>
+<script src="js/navigation.js"></script>
 
 </html>
