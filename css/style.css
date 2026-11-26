@@ -103,7 +103,7 @@ iframe {
 .contentwrap {
   display: grid;
   row-gap: 2.6em;
-  grid-template-columns: 20.2em 55%;
+  grid-template-columns: 20.5em 55%;
   justify-content: space-between;
   align-items: start;
 }
