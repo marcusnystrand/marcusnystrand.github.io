@@ -30,26 +30,30 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mediaquerys.css">
   <link rel="stylesheet" href="css/underlines.css">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
   <div class="allwrap">
     <div class="navwrap">
       <div class="title"><a href="index.html">Marcus Nystrand</a></div>
-      <div class="navlinks"><a href="index.html"><u>portfolio</u></div></a>
+      <div class="navlinks"><a id="portfolio-link" href="index.html"><u>portfolio</u></a></div>
       <div class="navlinks"><a href="archive.html">archive</div></a>
     </div>
 
     <div class="contentwrap">
 
       <div class="info">
-        I create marketing assets for games, including trailers, screenshots, key art, logotypes etc. I also <a href="https://store.steampowered.com/curator/45795556">solo-develop</a> games as a hobby.
+        I create marketing assets for games, including trailers, screenshots, key art, logotypes etc. I also <a
+          href="https://store.steampowered.com/curator/45795556">solo-develop</a> games as a hobby.
         <br><br>
         The projects on this page are a selection of my work that I think represents what I do.
         <br><br>
         Here is my <a href="MarcusNystrand_CV_2026-11-25.pdf" target="_href">CV</a>.
         <br><br>
-        Contact: nilsmarcusnystrand@gmail.com
+        Contact: <i><u>nilsmarcusnystrand@gmail.com</u></i>
       </div>
 
       <div class="mainwrap">
@@ -93,6 +97,15 @@
       </div>
     </div>
   </div>
+
+  <script>
+  const isLocal = window.location.protocol === "file:";
+
+  if (!isLocal) {
+    document.getElementById("portfolio-link").href = "/";
+  }
+</script>
+
 </body>
 
 </html>
