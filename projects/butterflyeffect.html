@@ -33,7 +33,7 @@
 
     <div class="navwrap">
       <div class="title"><u>The Butterfly Effect</u></div>
-      <div class="navlinks"><a href="../index.html">portfolio</div></a>
+      <div class="navlinks"><a id="portfolio-link" href="index.html"><u>portfolio</u></a></div>
       <div class="navlinks"><a href="../archive.html">archive</div></a>
     </div>
 
@@ -73,5 +73,13 @@
   <div class="footer"></div>
   
 </body>
+
+  <script>
+  const isLocal = window.location.protocol === "file:";
+
+  if (!isLocal) {
+    document.getElementById("portfolio-link").href = "/";
+  }
+</script>
 
 </html>
